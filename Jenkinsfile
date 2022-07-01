@@ -13,8 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cd build && make'
-                sh './hello'
+                sh 'cd build && make && ./hello'
             }
         }
     }
