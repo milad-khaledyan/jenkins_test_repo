@@ -8,11 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                mkdir build
-                cd build
-                cmake ..
-                make
-                ./hello
+                cmakeBuild buildDir: 'build', installation: 'InSearchPath'
             }
         }
     }
