@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                cmakeBuild buildDir: 'build', installation: 'InSearchPath', steps: [[make]]
+                cmakeBuild generator: 'make', buildDir: 'build', installation: 'InSearchPath', steps: [[args: '-j12']]
             }
         }
     }
