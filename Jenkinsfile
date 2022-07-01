@@ -11,6 +11,5 @@ pipeline {
                 cmakeBuild buildDir: 'build', installation: 'InSearchPath', steps: [[withCmake: true]]
             }
         }
-        }
     }
 }
