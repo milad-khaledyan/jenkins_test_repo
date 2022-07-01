@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                cmakeBuild generator: 'make', buildDir: 'build', installation: 'InSearchPath'
+                cmakeBuild generator: 'Unix Makefiles', buildDir: 'build', installation: 'InSearchPath'
             }
         }
     }
