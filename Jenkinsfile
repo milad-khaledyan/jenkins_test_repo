@@ -8,13 +8,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                cmakeBuild buildDir: 'build', installation: 'InSearchPath'
+                cmakeBuild buildDir: 'build', installation: 'InSearchPath', steps: [[withCmake: true]]
             }
         }
-        stage('Test') {
-            steps {
-                sh 'cd build && make && ./hello'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         sh 'cd build && make'
+        //     }
+        // }
     }
 }
