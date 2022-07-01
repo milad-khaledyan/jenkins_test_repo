@@ -11,5 +11,11 @@ pipeline {
                 cmakeBuild buildDir: 'build', installation: 'InSearchPath'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'cd build && make'
+                sh './hello'
+            }
+        }
     }
 }
