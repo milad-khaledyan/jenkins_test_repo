@@ -1,10 +1,10 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'python:3.10.1-alpine' } }
+    agent { label "linux" }
     stages {
-        stage('build') {
+        stage('Hello') {
             steps {
-                sh 'echol "HELLO MILAD" && python --version'
+                echo "HELLO MILAD"
             }
         }
     }
