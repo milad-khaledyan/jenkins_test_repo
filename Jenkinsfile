@@ -1,9 +1,9 @@
 pipeline {
-    agent { label "linux" }
+    agent any 
     stages {
-        stage('Hello') {
+        stage('Stage 1') {
             steps {
-                echo "HELLO MILAD"
+                echo 'Hello world!' 
             }
         }
     }
